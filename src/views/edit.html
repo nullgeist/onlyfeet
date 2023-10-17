@@ -1,0 +1,30 @@
+<%- include('header.html') -%>
+
+<a href="/<%= user.name %>">🡰 back</a>
+
+<% if (user.name === 'guest') { %>
+    <p>The guest account has no profile.</p>
+<% } else { %>
+    <div class="main">
+        <div class="horizontal">
+            <p>About</p>
+            <div class="capitalize username"><%= user.name %></div>
+        </div>
+
+        <div class="box">
+          <form method="post" action="/<%= user.name %>/edit">
+            <p>
+              <div><label style="font-variant: small-caps;" for="teaser"><b>Teaser</b></label></div>
+              <input type="text" id="teaser" name="teaser" value="<%= user.teaser %>" />
+            </p>
+            <p>
+              <div><label style="font-variant: small-caps;" for="about"><b>About me</b></label></div>
+              <textarea id="about" name="about" rows="5" cols="100"><%- user.about %></textarea>
+            </p>
+            <input class="update-button" type="submit" value="Update" />
+          </form>
+        </div>
+    </div>
+<% } %>
+
+<%- include('footer.html') -%>

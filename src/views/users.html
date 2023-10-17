@@ -1,0 +1,30 @@
+<%- include('header.html') -%>
+
+<div class="main">
+  <div class="horizontal">
+    <div class="horizontal box">
+      <div>Welcome, <b class="capitalize"><%= currentUser %></b>!</div>
+      <nav>
+        <a href="/logout">Logout</a>
+        <% if (currentUser !== 'guest') { %>
+          | <a href="/<%= currentUser %>">Profile</a>
+        <% } %>
+      </nav>
+    </div>
+  </div>
+
+  <h3>👇 Check out our latest influencers!</h3>
+
+  <ul>
+    <% users.filter(user => user.name !== 'guest' && user.name !== currentUser).forEach(function(user){ %>
+      <li>
+        <a href="<%= user.name %>"><span class="capitalize username"><%= user.name %></span></a>
+        <% if (user.teaser) { %>
+          <span class="teaser"><%= user.teaser %></span>
+        <% } %>
+      </li>
+    <% }) %>
+  </ul>
+</div>
+
+<%- include('footer.html') -%>

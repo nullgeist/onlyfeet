@@ -1,0 +1,162 @@
+* {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: rosybrown
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: floralwhite;
+    padding: 25px 0;
+}
+
+footer {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type=text],
+input[type=password] {
+    padding: 2px;
+    border: 1px solid rosybrown;
+    border-radius: 5px;
+
+    &:focus {
+        outline: none;
+        border: 1px solid brown !important;
+    }
+}
+
+#title {
+    font-family: 'Pacifico';
+    font-size: 40px;
+    font-weight: bold;
+    color: palevioletred;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#subtitle {
+    font-family: 'Pacifico';
+    font-size: 16px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    align-items: center;
+    gap: 25px;
+    margin: 50px;
+}
+
+.disclaimer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 5px;
+    line-height: 1.5;
+    font-size: 16px;
+    
+ }
+
+ .report-button {
+    background-color: indianred;
+    color: #f2f3f4;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    min-width: 100px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: tomato;
+        border: 2px solid tomato;
+    }
+
+    &:active {
+        cursor: pointer;
+        background-color: darkred;
+        border: 2px solid darkred;
+    }
+ }
+
+ .update-button,
+ .login-button {
+    background-color: darkcyan;
+    color: #f2f3f4;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 15px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: cadetblue;
+        border: 2px solid cadetblue;
+    }
+
+    &:active {
+        cursor: pointer;
+        background-color: cornflowerblue;
+        border: 2px solid cornflowerblue;
+    }
+ }
+
+.username {
+    font-family: 'Pacifico';
+    font-size: 32px;
+    color: saddlebrown;
+}
+
+.teaser {
+    background-color: rosybrown;
+    color: #f2f2f2;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 16px;
+    min-width: 200px;
+}
+
+.box {
+    width: fit-content;
+    block-size: fit-content;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}

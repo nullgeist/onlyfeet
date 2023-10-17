@@ -1,0 +1,32 @@
+<%- include('header.html') -%>
+
+<!-- currently we are in BETA with only a few users, but you can have a look around using our guest account. -->
+
+<!-- username: guest -->
+<!-- password: guest -->
+
+<div class="main">
+    <div class="horizontal">
+        <div class="box">
+            <form method="post" action="/login">
+                <p>
+                    <div><label style="font-variant: small-caps;" for="username"><b>Username</b></label></div>
+                    <input type="text" name="username" id="username">
+                </p>
+                <p>
+                    <div><label style="font-variant: small-caps;" for="password"><b>Password</b></label></div>
+                    <input type="password" name="password" id="password">
+                </p>
+                <p>
+                    <input class="login-button" type="submit" value="Login">
+                </p>
+            </form>
+
+            <% if (msg) { %>
+                <%= msg %>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('footer.html') -%>

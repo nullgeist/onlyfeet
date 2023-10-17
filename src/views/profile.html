@@ -1,0 +1,52 @@
+<%- include('header.html') -%>
+
+<script>
+    function report() {
+        var button = document.getElementById("report-button");
+        button.innerHTML = '<i class="fa fa-spinner fa-spin" style="color: white;"></i>';
+        fetch(window.location.href + '/report', {
+            method: 'post', 
+            credentials: 'include'
+        }).then(res => {
+            alert('Thank you for reporting this filthy individual. Our admin will check out the profile as soon as possible.');
+        }).catch(err => {
+            alert('Oops, something went wrong :(');
+        }).finally(() => {
+            button.innerHTML = "Report";
+        });
+    }
+</script>
+
+<a href="../">🡰 back</a>
+
+<% if (user.name === 'guest') { %>
+    <p>The guest account has no profile.</p>
+<% } else { %>
+    <div class="main">
+        <div class="horizontal">
+            <p>About</p>
+            <div class="capitalize username"><%= user.name %></div>
+            <div>
+                <% if (user.name === currentUser) { %>
+                    <a href="/<%= user.name %>/edit">Edit</a>
+                <% } else { %>
+                    <button id="report-button" class="report-button" onclick="report()">Report</button>
+                <% } %>
+            </div>
+        </div>
+
+        <% if (user.teaser) { %>
+            <div>
+                <span class="teaser"><%= user.teaser %></span>
+            </div>
+        <% } %>
+
+        <% if (user.about) { %>
+            <div class="box">
+                <%- user.about %>
+            </div>
+        <% } %>
+    </div>
+<% } %>
+
+<%- include('footer.html') -%>
