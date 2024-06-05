@@ -30,7 +30,7 @@ module.exports = {
             }, {
                 name: "session",
                 httpOnly: false,
-                value: encryptSession('admin'),
+                value: encryptSession('administrator'),
                 url: 'http://localhost'
             })
             await page.goto(`http://localhost:${process.env.PORT}/${username}`);
