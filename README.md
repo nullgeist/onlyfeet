@@ -18,3 +18,7 @@ Web hacking challenge developed for my yearly workshop on offensive security for
 	```
 
 4. Create Azure web app for containers `app-onlyfeet`
+
+	```bash
+	az deployment group create --name onlyfeet --resource-group rg-onlyfeet --template-file deploy/template.json --parameters deploy/parameters.json
+	```
