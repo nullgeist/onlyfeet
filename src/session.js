@@ -2,8 +2,8 @@ const { createCipheriv, createDecipheriv, randomBytes } = require('crypto');
 
 const KEY = randomBytes(8).toString('hex');
 
-/* This little birdy ensures authenticity of encrypted sessions. */
-const CANARY = 'canary🦜';
+/* This little birdy will ensure integrity and authenticity of encrypted sessions. */
+const CANARY = '🦜';
 
 module.exports = {
 

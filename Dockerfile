@@ -4,7 +4,7 @@ ENV LANG="C.UTF-8" PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 RUN apk update && \
     apk add --no-cache zlib-dev udev nss ca-certificates chromium && \
-    adduser -h /home/admin -D -u 10086 admin && \
+    adduser -h /home/administrator -D -u 10086 administrator && \
     yarn cache clean && \
     rm -rf /tmp/* /etc/apk/* /var/cache/apk/* /usr/share/man
 
@@ -16,7 +16,7 @@ RUN npm install
 
 COPY . .
 
-USER admin
+USER administrator
 
 EXPOSE 80
 

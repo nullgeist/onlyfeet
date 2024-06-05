@@ -1,0 +1,8 @@
+[
+	{
+		"name": "<name>",
+		"hash": "<password-hash>",
+		"teaser": "<profile-short-description",
+		"about": "<profile-long-description"
+	}
+]
