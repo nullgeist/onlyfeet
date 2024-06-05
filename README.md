@@ -5,6 +5,7 @@ Web hacking challenge developed for my yearly workshop on offensive security for
 ## Setup
 
 1. Create and prepare `src/users.json`
+2. Set `FLAG` in `.env`
 2. Create Azure container registry `cronlyfeet`
 3. Build and deploy image
 
